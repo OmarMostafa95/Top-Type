@@ -21,7 +21,7 @@ function AuthProvider({ children }) {
     const logout = () => {
         localStorage.removeItem('currentUser');
         setCurrentUser(null);
-        
+        window.location.reload()
     }
     return (
         <AuthContext.Provider value={{ currentUser, login, logout }}>

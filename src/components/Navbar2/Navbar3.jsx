@@ -3,6 +3,8 @@ import { useAuth, AuthProvider } from '../Auth/AuthProvider';
 import { NavLink } from 'react-router-dom';
 import { Facebook, Grab, Home } from 'lucide-react';
 export default function Navbar3() {
+
+
     const { currentUser, logout } = useAuth()
     const [dropdown, setDropdown] = useState(false);
     const toggleDrowndown = () => {
@@ -25,33 +27,35 @@ export default function Navbar3() {
                         <ul className='flex flex-row'>
                             {currentUser ? (
                                 <>
-                                    <li className='p-0 text-lg shadow-sm shadow-gray-800 text-gray font-bold fixed right-12 hover:border border-gray-700 px-2 rounded-md transition '><button onClick={toggleDrowndown} >
+                                    <li className='p-0 text-lg shadow-sm shadow-gray-800 text-gray font-bold fixed right-12 hover:border-b-2 border-gray-700 px-2 rounded-md transition '><button onClick={toggleDrowndown} >
                                         {currentUser.name}
                                     </button>
-                                </li>
-                                    {dropdown && (
-                                        <div className='absolute right-0 top-8 mt-1 w-32 bg-white shadow-lg rounded-lg z-50'>
-                                            <button
-                                                onClick={logout}
-                                                className=' block w-full text-left px-4 py-2 text-sm text-gray-800  hover:bg-gray-400 shadow-lg rounded-lg'
-                                            >
-                                                Logout
-                                            </button>
-                                        </div>
-                                    )}
-                                
-                        </>) : (
-                        <>
-                            <li><NavLink to='/login' className='p-2 text-lg font-medium hover:text-gray-400'>Login</NavLink></li>
-                            <li><NavLink to='/Register' className='p-2 text-lg font-medium hover:text-gray-400'>Register</NavLink></li>
-                        </>
-                        )
+                                    </li>
+                                    <div
+                                        className={`absolute right-0 top-8 mt-1 w-32 bg-white shadow-lg rounded-lg z-50 transition-opacity duration-300 ease-in-out
+                                            ${dropdown ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-0 pointer-events-none"}`}
+                                    >
+                                        <button
+                                            onClick={logout}
+                                            className="block w-full text-left px-4 py-2 text-sm text-gray-800 hover:bg-gray-400 shadow-lg rounded-lg"
+                                        >
+                                            Logout
+                                        </button>
+                                    </div>
+
+
+                                </>) : (
+                                <>
+                                    <li><NavLink to='/login' className='p-2 text-lg font-medium hover:text-gray-400'>Login</NavLink></li>
+                                    <li><NavLink to='/Register' className='p-2 text-lg font-medium hover:text-gray-400'>Register</NavLink></li>
+                                </>
+                            )
                             }
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </nav >
+            </nav >
         </>
     )
-    
+
 }

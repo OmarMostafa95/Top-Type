@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useFormik } from 'formik';
-import React, { useContext, useState } from 'react'
+import {React,  useContext, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../Auth/AuthProvider';
 
@@ -9,7 +9,7 @@ export default function Login1() {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
     function HandleLogin(logs) {
-        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const users = JSON.parse(localStorage.getItem("users")) ;
         setLoading(true);
         const isUser = users.find(
             user => user.email === logs.email && user.password === logs.password
