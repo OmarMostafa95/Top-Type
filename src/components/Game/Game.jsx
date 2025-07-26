@@ -183,7 +183,7 @@ export default function Game({ difficulty }) {
                     if (correctness[globalIndex] === false) {
                         className = "text-red-600   bg-slate-800";
                     } else if (correctness[globalIndex] === true) {
-                        className = "text-green-900";
+                        className = "text-green-600";
                     }
                     else if (index === currentIndex % chunk) {
                         className = "text-blue-600 bg-slate-800";
