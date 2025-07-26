@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import Game from '../../Game/Game';
+import Game from '../Game/Game';
 
 export default function Home() {
 const [difficulty,setdifficulty]=useState(null)

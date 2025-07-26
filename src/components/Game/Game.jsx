@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { useEffect, useState } from 'react'
-import { RandomWordsez, RandomWordsnm, RandomWordsHard } from '../components/WordsGen/WordsGen'
-import { useAuth } from '../components/Auth/AuthProvider'
+import { RandomWordsez, RandomWordsnm, RandomWordsHard } from '../WordsGen/WordsGen'
+import { useAuth } from '../Auth/AuthProvider'
 import { useNavigate } from 'react-router-dom';
 
 export default function Game({ difficulty }) {
