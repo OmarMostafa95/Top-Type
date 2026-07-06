@@ -38,7 +38,7 @@ const wordBank = ["a", "about", "above", "across", "act", "add", "after", "again
 ]
 const numberBank = () => Math.floor(Math.random() * 1000).toString()
 const SymbolBank = () => {
-    const symbols = ["@", "#", "$", "%", "&", "*", "!", "?", "~", "^"];
+    const symbols = ["@", "#", "$", "%", "&", "*", "!", "?", ];
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 //Easy
