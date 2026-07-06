@@ -1,7 +1,7 @@
 import React from "react"
 import { createBrowserRouter, Router, RouterProvider } from "react-router-dom"
 import Home from "./components/Home/Home"
-import Layout from "./components/Layout/Layoutayout"
+import Layout from "./components/Layout/Layout"
 import Login1 from "./components/Login/Login1"
 import Register1 from "./components/Register/Register1"
 import { ToastContainer } from "react-toastify"
