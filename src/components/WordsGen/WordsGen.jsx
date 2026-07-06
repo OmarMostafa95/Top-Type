@@ -42,7 +42,7 @@ const SymbolBank = () => {
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
 //Easy
-export function RandomWordsez(count = 50) {
+export function RandomWordsez(count = 5) {
     return Array.from({ length: count },
         () => wordBank[Math.floor(Math.random() * wordBank.length)]
     )
